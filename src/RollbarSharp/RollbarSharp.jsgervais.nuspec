@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>RollbarSharp.jsgervais</id>
+        <version>1.0.1</version>
+        <title>RollbarSharp.jsgervais</title>
+        <authors>Michael Roach,Patrick Wyatt,Alberto Monteiro,richardversluis, jsgervais</authors>
+        <owners>jsgervaish</owners>
+        <licenseUrl>https://github.com/jsgervais/RollbarSharp/blob/master/LICENSE.txt</licenseUrl>
+        <projectUrl>https://github.com/jsgervais/rollbarsharp</projectUrl> 
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>$description$ -- forked</description>
+        <releaseNotes>https://github.com/jsgervais/RollbarSharp/releases/tag/1.0.1</releaseNotes>
+        <language>en-US</language>
+        <tags>rollbar</tags>
+    </metadata>
+	<files>
+		<file src="bin\Release\RollbarSharp.dll" target="lib\net45" />
+		<file src="bin\Release\Newtonsoft.Json.dll" target="lib\net45" />
+	</files>
+</package>

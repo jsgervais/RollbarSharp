@@ -32,15 +32,20 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'pack|AnyCPU'">
+    <OutputPath>bin\pack\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
   <ItemGroup>
     <!-- Added this because xbuild in Mono doesn't add a reference to it -->
     <Reference Include="nunit.framework, Version=2.6.2.12296, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <HintPath>..\..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
       <Private>True</Private>
-    </Reference>
-    <Reference Include="RollbarSharp, Version=0.3.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\RollbarSharp\bin\Release\RollbarSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -61,6 +66,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RollbarSharp\RollbarSharp.csproj">
+      <Project>{43a8b009-ca64-4d25-845a-fe2a53890fbc}</Project>
+      <Name>RollbarSharp</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RollbarSharp\RollbarSharp.csproj">
       <Project>{43a8b009-ca64-4d25-845a-fe2a53890fbc}</Project>
       <Name>RollbarSharp</Name>
